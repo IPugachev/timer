@@ -1,0 +1,80 @@
+.timer__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  &_light {
+    background-color: #547c27;
+    background-image: url('https://www.transparenttextures.com/patterns/squairy.png');
+  }
+
+  &_dark {
+    background: #0e0111;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  }
+}
+
+.timer__mode-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  &_dark {
+    color: #0e0111c9;
+  }
+  &_light {
+    color: #ffffff80;
+  }
+}
+
+.timer__input {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 70px;
+  border-radius: 1.8rem;
+  font-size: 3rem;
+}
+
+.timer {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 1.5rem 1.3rem;
+  border-radius: 1.8rem;
+  width: max-content;
+  cursor: grab;
+
+  &_light {
+    border: 7px solid #0e0111c9;
+    color: #000000c9;
+    background-color: #c4e2a1;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &_dark {
+    background: #200227;
+    border: 10px solid rgb(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255, 0.9);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 9rem;
+    p {
+      font-size: 6.5rem;
+      font-weight: 500;
+    }
+    span {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+}

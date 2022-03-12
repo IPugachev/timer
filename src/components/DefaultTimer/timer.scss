@@ -1,0 +1,28 @@
+.container {
+}
+
+.timer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem 1rem;
+  border: 1px solid black;
+  border-radius: 1.8rem;
+  width: max-content;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 6rem;
+    p {
+      font-size: 4.5rem;
+    }
+    span {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}
