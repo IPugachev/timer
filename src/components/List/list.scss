@@ -1,0 +1,35 @@
+.timer__list {
+  display: flex;
+  flex-direction: column;
+  height: 29px;
+  font-size: 1.5rem;
+  overflow-y: scroll;
+  border-radius: 5px;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  &:hover {
+    height: 8rem;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.timer__list-item {
+  scroll-snap-align: center;
+  text-align: center;
+  background-color: #c4e2a1;
+  &:hover {
+    background-color: #8ca173;
+    cursor: pointer;
+  }
+
+  &_hidden {
+    user-select: none;
+    opacity: 0;
+  }
+
+  &_active {
+  }
+}

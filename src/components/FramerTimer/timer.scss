@@ -8,11 +8,13 @@
   &_light {
     background-color: #547c27;
     background-image: url('https://www.transparenttextures.com/patterns/squairy.png');
+    color: #000000c9;
   }
 
   &_dark {
     background: #0e0111;
     background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    color: rgb(255, 255, 255, 0.9);
   }
 }
 
@@ -31,14 +33,20 @@
 }
 
 .timer__input {
+  display: flex;
   position: absolute;
-  top: 20px;
+  align-items: center;
+  // overflow: hidden;
+  height: 29px;
+  top: 4rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
-  height: 70px;
-  border-radius: 1.8rem;
-  font-size: 3rem;
+  gap: 5px;
+  h4 {
+    font-size: 2rem;
+  }
+  p {
+  }
 }
 
 .timer {

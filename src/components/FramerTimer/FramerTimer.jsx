@@ -3,6 +3,7 @@ import './timer.scss'
 import { motion } from 'framer-motion'
 import { MdLightMode } from 'react-icons/md'
 import { MdModeNight } from 'react-icons/md'
+import List from '../List'
 
 const FramerTimer = () => {
   console.log('timer rendered')
@@ -29,7 +30,8 @@ const FramerTimer = () => {
   }
 
   useLayoutEffect(() => {
-    const endDate = new Date().getTime() + 600000
+    const endDate = new Date().getTime()
+    //+ 600000
     startTimer(endDate)
     return () => {
       clearInterval(interval)
@@ -50,7 +52,18 @@ const FramerTimer = () => {
       ) : (
         <MdLightMode className='timer__mode-icon timer__mode-icon_light' onClick={() => setMode(true)} />
       )}
-      {/* <input type='text' className='timer__input' /> */}
+      <div className='timer__input'>
+        <h4>Set time:</h4>
+        <List />
+        <p>days</p>
+        <List />
+        <p>hours</p>
+        <List />
+        <p>min.</p>
+        <List />
+        <p>sec.</p>
+      </div>
+
       <motion.div
         drag
         dragConstraints={constraintsRef}

@@ -1,0 +1,12 @@
+.timer__list-item {
+  scroll-snap-align: center;
+  text-align: center;
+  background-color: #c4e2a1;
+  &:hover {
+    background-color: #8ca173;
+    cursor: pointer;
+  }
+
+  &_active {
+  }
+}
