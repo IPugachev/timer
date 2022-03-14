@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   height: 29px;
+  // height: 7rem;
   font-size: 1.5rem;
   overflow-y: scroll;
   border-radius: 5px;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+
   &:hover {
-    height: 8rem;
+    height: 7rem;
   }
 
   &::-webkit-scrollbar {
@@ -19,17 +21,32 @@
 .timer__list-item {
   scroll-snap-align: center;
   text-align: center;
-  background-color: #c4e2a1;
-  &:hover {
-    background-color: #8ca173;
-    cursor: pointer;
+  cursor: pointer;
+
+  &_light {
+    background-color: #c4e2a1;
+    &:hover {
+      background-color: #8ca173;
+    }
+  }
+
+  &_dark {
+    background: #200227;
+    &:hover {
+      background-color: #6e3d79;
+    }
+  }
+
+  &:nth-child(3) {
+    border-radius: 5px 5px 0 0;
+  }
+  &:nth-child(62) {
+    border-radius: 0 0 5px 5px;
   }
 
   &_hidden {
-    user-select: none;
+    pointer-events: none;
     opacity: 0;
-  }
-
-  &_active {
+    cursor: default;
   }
 }

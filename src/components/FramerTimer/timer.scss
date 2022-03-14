@@ -5,6 +5,7 @@
   place-content: center;
   place-items: center;
   overflow: hidden;
+  user-select: none;
   &_light {
     background-color: #547c27;
     background-image: url('https://www.transparenttextures.com/patterns/squairy.png');
@@ -24,11 +25,11 @@
   top: 20px;
   font-size: 2rem;
   cursor: pointer;
-  &_dark {
-    color: #0e0111c9;
-  }
   &_light {
     color: #ffffff80;
+  }
+  &_dark {
+    color: #0e0111c9;
   }
 }
 
@@ -36,17 +37,48 @@
   display: flex;
   position: absolute;
   align-items: center;
-  // overflow: hidden;
+  top: 70px;
   height: 29px;
-  top: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 5px;
+  gap: 10px;
   h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    width: max-content;
   }
-  p {
+  &-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
+}
+
+.timer__button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 1.8rem;
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+
+  &_light {
+    background-color: #c4e2a1;
+    border: 2px solid #0e0111c9;
+    color: #000000c9;
+  }
+  &_dark {
+    background: #200227;
+    border: 2px solid #ffffff80;
+    color: rgb(255, 255, 255, 0.9);
+  }
+}
+
+.timer__image {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  right: 10px;
+  top: 0;
+  cursor: pointer;
 }
 
 .timer {
@@ -66,7 +98,7 @@
 
   &_dark {
     background: #200227;
-    border: 10px solid rgb(255, 255, 255, 0.5);
+    border: 7px solid rgb(255, 255, 255, 0.5);
     box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2);
     color: rgb(255, 255, 255, 0.9);
   }
@@ -83,6 +115,33 @@
     span {
       font-size: 1.5rem;
       font-weight: 300;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .timer__input {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    h4 {
+      font-size: 1.3rem;
+    }
+  }
+  .timer {
+    gap: 0.5rem;
+    padding: 1rem 0.5rem 0.3rem;
+
+    &__item {
+      width: 4.9rem;
+      p {
+        font-size: 3.7rem;
+        font-weight: 500;
+      }
+      span {
+        font-size: 1rem;
+        font-weight: 300;
+      }
     }
   }
 }
